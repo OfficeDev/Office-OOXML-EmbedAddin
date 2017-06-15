@@ -26,6 +26,7 @@ June 15, 2017:
 * Office 2016, Version 1705, build 16.0.8122.1000 Click-to-Run, or later.
 * Visual Studio 2017
 * [Open XML SDK 2.5](https://www.microsoft.com/en-us/download/details.aspx?id=30425)
+* The add-in that is embedded, which is Script Lab in the case of this sample, must have markup that enables auto-open in its manifest. For more details see [Automatically open a task pane with a document](https://dev.office.com/docs/add-ins/develop/automatically-open-a-task-pane-with-a-document).
 
 ## To use the project
 
@@ -36,7 +37,7 @@ June 15, 2017:
     - WindowsBase (in the **Framework** tab of the Visual Studio Extensions Manager)
     - DocumentFormat.OpenXml (in the **Extensions** tab) 
 4. Press F5. This opens the home page of the application in your browser.
-5. Use the **Browse** control on the page to navigate to any Excel, Word, or PowerPoint file. *Do not use a file that is already configured to open an add-in automatically. Only one add-in can be auto-opened in a file.*
+5. Use the **Browse** control on the page to navigate to any Excel, Word, or PowerPoint file. 
 6. Press **Upload**.
 7. Optional. If there is a particular snippet that you want to import as soon as Script Lab runs, enter its Gist ID in the textbox.
    > **Note**: This feature may not be supported in Script Lab for a short period after this sample is released. But it will do no harm to enter a Gist ID.
@@ -75,7 +76,7 @@ In this code:
 
 If you were setting up an add-in from a file share catalog for auto-open, you would use different values:
 - The **StoreType** value would be "FileSystem". 
-- The **Store** value would be the URL of the network share; for example, "\\\MyComputer\MySharedFolder".
+- The **Store** value would be the URL of the network share; for example, "\\\MyComputer\MySharedFolder". This should be the exact URL that appears as the share's **Trusted Catalog Address** in the Office **Trust Center**.
 - The **Id** value would be the app ID in the add-ins manifest.
 
 > **Note**: For more information about alternative values for these attributes, see [Automatically open a task pane with a document](https://dev.office.com/docs/add-ins/develop/automatically-open-a-task-pane-with-a-document).
