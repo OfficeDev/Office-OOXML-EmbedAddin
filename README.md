@@ -2,8 +2,6 @@
 
 The are a number of scenarios in which an Office Add-in should be embedded in an Office document and automatically open when the document opens.
 
-> **Note**: For more information about automatically opening an add-in in a document, see [Automatically open a task pane with a document](https://dev.office.com/docs/add-ins/develop/automatically-open-a-task-pane-with-a-document).
-
 This sample uses .NET and the Open XML SDK to configure Office documents with the markup that makes this possible. In this sample, the [Script Lab add-in](https://store.office.com/en-001/app.aspx?assetid=WA104380862&sourcecorrid=d5eb16ba-d44c-41f5-892e-96d383be4393&searchapppos=0&ui=en-US&rs=en-001&ad=US&appredirect=false) is embedded in an Office file of the user's choice.
 
 
