@@ -24,7 +24,7 @@ June 15, 2017:
 ## Prerequisites
 
 * Office 2016, Version 1705, build 16.0.8122.1000 Click-to-Run, or later.
-* Visual Studio 2017
+* Visual Studio 2017 or later.
 * [Open XML SDK 2.5](https://www.microsoft.com/en-us/download/details.aspx?id=30425)
 * The add-in that is embedded, which is Script Lab in the case of this sample, must have markup that enables auto-open in its manifest. For more details see [Automatically open a task pane with a document](https://dev.office.com/docs/add-ins/develop/automatically-open-a-task-pane-with-a-document).
 
@@ -36,10 +36,13 @@ June 15, 2017:
 
     - WindowsBase (in the **Framework** tab of the Visual Studio Extensions Manager)
     - DocumentFormat.OpenXml (in the **Extensions** tab) 
-4. Press F5. This opens the home page of the application in your browser.
-5. Use the **Browse** control on the page to navigate to any Excel, Word, or PowerPoint file. 
-6. Press **Upload**.
-7. Optional. If there is a particular snippet that you want to import as soon as Script Lab runs, enter its Gist ID in the textbox.
+4. Right-click the project name in **Solution Explorer** and select **Properties**.
+5. When the **Properties** pane opens, open the **Web** tab.
+6. On the **Web** tab, enable **Specific Page** and enter `home.aspx` in the text box.
+7. Press F5. This opens the home page of the application in your browser.
+8. Use the **Browse** control on the page to navigate to any Excel, Word, or PowerPoint file. 
+9. Press **Upload**.
+10. Optional. If there is a particular snippet that you want to import as soon as Script Lab runs, enter its Gist ID in the textbox.
    > **Note**: This feature may not be supported in Script Lab for a short period after this sample is released. But it will do no harm to enter a Gist ID.
 
 8. Press **Embed Script Lab**.
