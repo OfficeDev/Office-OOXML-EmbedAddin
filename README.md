@@ -1,3 +1,13 @@
+---
+topic: sample
+products:
+- Office 365
+languages:
+- C#
+extensions:
+  contentType: samples
+  createdDate: 6/13/2017 10:42:04 AM
+---
 # Web application that uses Open XML SDK to configure Office documents to automatically open a specified add-in
 
 The are a number of scenarios in which an Office Add-in should be embedded in an Office document and automatically open when the document opens.
