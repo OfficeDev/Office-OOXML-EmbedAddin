@@ -19,6 +19,7 @@ namespace Office_OOXML_EmbedAddin
                 case "Excel":
                     using (var spreadsheet = SpreadsheetDocument.Open(memoryStream, true))
                     {
+                        spreadsheet.DeletePart(spreadsheet.WebExTaskpanesPart);
                         var webExTaskpanesPart = spreadsheet.AddWebExTaskpanesPart();
                         OOXMLHelper.CreateWebExTaskpanesPart(webExTaskpanesPart, snippetID);
                     }
