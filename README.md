@@ -12,7 +12,7 @@ extensions:
 
 The are a number of scenarios in which an Office Add-in should be embedded in an Office document and automatically open when the document opens.
 
-> **Note**: For more information about automatically opening an add-in in a document, see [Automatically open a task pane with a document](https://dev.office.com/docs/add-ins/design/automatically-open-a-task-pane-with-a-document).
+> **Note**: For more information about automatically opening an add-in in a document, see [Automatically open a task pane with a document](https://docs.microsoft.com/en-us/office/dev/add-ins/develop/automatically-open-a-task-pane-with-a-document).
 
 This sample uses .NET and the Open XML SDK to configure Office documents with the markup that makes this possible. In this sample, the [Script Lab add-in](https://store.office.com/en-001/app.aspx?assetid=WA104380862&sourcecorrid=d5eb16ba-d44c-41f5-892e-96d383be4393&searchapppos=0&ui=en-US&rs=en-001&ad=US&appredirect=false) is embedded in an Office file of the user's choice.
 
@@ -31,12 +31,16 @@ June 15, 2017:
 
 * Initial version.
 
+July 8, 2020
+
+* Fixed old links.
+
 ## Prerequisites
 
 * Office 2016, Version 1705, build 16.0.8122.1000 Click-to-Run, or later.
 * Visual Studio 2017 or later.
 * [Open XML SDK 2.5](https://www.microsoft.com/en-us/download/details.aspx?id=30425)
-* The add-in that is embedded, which is Script Lab in the case of this sample, must have markup that enables auto-open in its manifest. For more details see [Automatically open a task pane with a document](https://dev.office.com/docs/add-ins/develop/automatically-open-a-task-pane-with-a-document).
+* The add-in that is embedded, which is Script Lab in the case of this sample, must have markup that enables auto-open in its manifest. For more details see [Automatically open a task pane with a document](https://docs.microsoft.com/en-us/office/dev/add-ins/develop/automatically-open-a-task-pane-with-a-document).
 
 ## To use the project
 
@@ -92,7 +96,7 @@ If you were setting up an add-in from a file share catalog for auto-open, you wo
 - The **Store** value would be the URL of the network share; for example, "\\\MyComputer\MySharedFolder". This should be the exact URL that appears as the share's **Trusted Catalog Address** in the Office **Trust Center**.
 - The **Id** value would be the app ID in the add-ins manifest.
 
-> **Note**: For more information about alternative values for these attributes, see [Automatically open a task pane with a document](https://dev.office.com/docs/add-ins/develop/automatically-open-a-task-pane-with-a-document).
+> **Note**: For more information about alternative values for these attributes, see [Automatically open a task pane with a document](https://docs.microsoft.com/en-us/office/dev/add-ins/develop/automatically-open-a-task-pane-with-a-document).
 
 Second, is the line in the `GeneratePartContent` method that specifies the visibility of the taskpane when the file opens. 
 
@@ -104,7 +108,7 @@ In this code, the `Visibility` property of the `WebExtensionTaskpane` object is 
 
 The advantage of setting this property to `false` is that you can use the Office.js to turn give users the ability to turn on and off the auto-opening of the add-in. Specifically, your script sets the **Office.AutoShowTaskpaneWithDocument** document setting to `true` or `false`. However, if `WebExtensionTaskpane.Visibility` is set to `true`, there is no way for Office.js or, hence, your users to turn off the auto-opening of the add-in. Only editing the OOXML of the document can change `WebExtensionTaskpane.Visibility` to false.
 
-> **Note**: For more information about task pane visibility at the level of the Open XML that these .NET APIs represent, see [Automatically open a task pane with a document](https://dev.office.com/docs/add-ins/develop/automatically-open-a-task-pane-with-a-document).
+> **Note**: For more information about task pane visibility at the level of the Open XML that these .NET APIs represent, see [Automatically open a task pane with a document](https://docs.microsoft.com/en-us/office/dev/add-ins/develop/automatically-open-a-task-pane-with-a-document).
 
 ## Questions and comments
 
@@ -114,13 +118,13 @@ Questions about Microsoft Office 365 development in general should be posted to 
 
 ## Additional resources
 
-* [Office add-in documentation](https://msdn.microsoft.com/en-us/library/office/jj220060.aspx)
-* [Office Dev Center](http://dev.office.com/)
+* [Office add-in documentation](https://docs.microsoft.com/en-us/office/dev/add-ins/overview/office-add-ins)
+* [Office Dev Center](https://developer.microsoft.com/en-us/office)
 * More Office Add-in samples at [OfficeDev on Github](https://github.com/officedev)
 * [Script Lab](https://aka.ms/scriptlab)
 
 ## Copyright
-Copyright (c) 2017 Microsoft Corporation. All rights reserved.
+Copyright (c) 2017, 2020 Microsoft Corporation. All rights reserved.
 
 
 
